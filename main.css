@@ -63,6 +63,8 @@ nav span{
     padding-left: 4px;
 }
 /* zrob potem w javaScript zeby przy szerokosci max 600px zamienic klase .fa-caret-right na .fa-caret-down*/
+
+/*dodaj slide down w JQuery  */
 .fa-caret-right{
     display: inline-block;
     position: relative;
@@ -81,7 +83,7 @@ nav span{
 .hidden li:first-child{
     margin-top: 3px;
 }
-.hidden li .side-nav{
+.side-nav{
     position: absolute;
     left: 94px;
     top: -3px;
@@ -139,6 +141,19 @@ nav>form>button:hover{
         transition: width 2s;
     }
     nav>form>input:focus{
+        width: 100%;
+    }
+    nav>ul>li>ul.hidden{
+        position: relative;
+        width: 100%;
+    }
+    .side-nav{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .side-nav li{
         width: 100%;
     }
 }
