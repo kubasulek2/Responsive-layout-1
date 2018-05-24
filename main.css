@@ -197,7 +197,7 @@ article{
 }
 article img{
     width: 100%;
-    min-width: 450px;
+    min-width: 400px;
 }
 article a, .aside-button{
     display: block;
@@ -240,7 +240,7 @@ article a:active, .aside-button:active{
 .heading-container{
     background: #a4ceda;
     padding: 30px;
-    min-width: 450px;
+    min-width: 400px;
     border-radius: 4px;
 }
 
