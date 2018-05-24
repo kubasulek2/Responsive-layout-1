@@ -5,8 +5,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Sura', serif;
+}
 h1{
-    font-size: 2em;
+    font-size: 2.5em;
+}
+h3{
+    font-size: 1.7em;
 }
 ul{
     margin: 0;
@@ -62,7 +68,7 @@ nav a{
 nav span{
     padding-left: 4px;
 }
-/* zrob potem w javaScript zeby przy szerokosci max 600px zamienic klase .fa-caret-right na .fa-caret-down*/
+/* zrob potem w javaScript zeby przy szerokosci max 600px zamienic klase .fa-caret-right na .fa-caret-down i zmienic pozycje carety*/
 
 /*dodaj slide down w JQuery  */
 .fa-caret-right{
@@ -174,26 +180,88 @@ div.row:after{
 section{
     float: left;
     width: 75%;
-    padding: 20px 10px;
 }
 aside{
     float: left;
     width: 25%;
     padding: 20px 10px;
 }
-/*Footer*/
-
-.exp{
-    margin-bottom: 20px;
-    font-size: 30px;
-
-}
-.exp:focus{
+.img-container{
     width: 100%;
-    transition-property: width;
-    transition-duration: 4s;
-    transition-delay: 2s;
-    -webkit-transition-property: width;
-    -webkit-transition-duration: 4s;
-    -webkit-transition-delay: 2s;
+    height: auto;
+}
+article{
+    margin-bottom: 35px;
+}
+article img{
+    width: 100%;
+    min-width: 450px;
+}
+article a{
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 25%;
+    min-width: 150px;
+    padding: 10px 20px;
+    background: #46a049;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left:20px;
+}
+article a:hover{
+    background: #3e8e41;
+    box-shadow: 0 4px 3px #cccccc;
+    color: white;
+}
+article a:active{
+    box-shadow: 0 1px 3px #cccccc;
+    transform: translateY(3px);
+}
+.container h1, .container h3{
+    margin: 20px 0;
+    color: white;
+}
+.container p{
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+.heading-container{
+    background: #46a049;
+    padding: 30px;
+    min-width: 450px;
+    margin: 3px 0;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 1024px){
+    section, aside{
+        width: 100%;
+    }
+}
+/*Footer*/
+footer{
+    background: #cccccc;
+    margin-bottom: 10px;
+    height: 60px;
+    font-family: Courier;
+    color: white;
+}
+footer p{
+    font-size: 20px;
+}
+footer>div{
+    float: left;
+}
+footer>ul{
+    float: right;
+}
+footer>ul>li{
+    float: left;
+    display: block;
+    margin-right: 15px;
+    padding-top: 6px;
 }
