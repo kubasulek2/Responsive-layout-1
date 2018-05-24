@@ -102,6 +102,7 @@ nav>form>input{
     font-size: 18px;
     margin-top: 4px;
     border: 1px solid #ccc;
+    border-radius: 3px;
 
 }
 nav>form>input:focus{
@@ -128,12 +129,17 @@ nav>form>button:hover{
     nav>ul li, nav>form, nav>form>.fa{
         float: none;
         display: block;
-        /*width: 100%;*/
+        width: 100%;
         margin-top: 0;
 
     }
     nav>form>input{
-        /*width: 100%;*/
+        width: 244px;
+        -webkit-transition: width 0.6s ;
+        transition: width 2s;
+    }
+    nav>form>input:focus{
+        width: 100%;
     }
 }
 
@@ -161,3 +167,18 @@ aside{
     padding: 20px 10px;
 }
 /*Footer*/
+
+.exp{
+    margin-bottom: 20px;
+    font-size: 30px;
+
+}
+.exp:focus{
+    width: 100%;
+    transition-property: width;
+    transition-duration: 4s;
+    transition-delay: 2s;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: 4s;
+    -webkit-transition-delay: 2s;
+}
