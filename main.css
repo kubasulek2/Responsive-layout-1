@@ -53,17 +53,17 @@ li.active a{
     background: #008ae6;
     color: white;
 }
-nav a:hover{
-background: #66c2ff;
-color: white;
-}
 nav a{
     font-family: Arial;
     display: block;
-    padding: 10px 16px;
+    padding: 10px 30px;
     text-decoration: none;
     font-size: 20px;
     color: #333333;
+}
+nav a:hover {
+    background: #66c2ff;
+    color: white;
 }
 nav span{
     padding-left: 4px;
@@ -189,6 +189,8 @@ aside{
 .img-container{
     width: 100%;
     height: auto;
+    border-radius: 4px;
+    overflow: hidden;
 }
 article{
     margin-bottom: 35px;
@@ -197,26 +199,32 @@ article img{
     width: 100%;
     min-width: 450px;
 }
-article a{
+article a, .aside-button{
     display: block;
-    font-size: 20px;
     cursor: pointer;
     text-align: center;
     width: 25%;
-    min-width: 150px;
     padding: 10px 20px;
     background: #46a049;
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    margin-left:20px;
+    min-width: 150px;
 }
-article a:hover{
+article a{
+    margin-left:20px;
+    font-size: 20px;
+}
+.aside-button{
+    margin: 10px auto;
+    font-size: 16px;
+}
+article a:hover, .aside-button:hover{
     background: #3e8e41;
     box-shadow: 0 4px 3px #cccccc;
     color: white;
 }
-article a:active{
+article a:active, .aside-button:active{
     box-shadow: 0 1px 3px #cccccc;
     transform: translateY(3px);
 }
@@ -230,10 +238,9 @@ article a:active{
     font-size: 1.2em;
 }
 .heading-container{
-    background: #46a049;
+    background: #a4ceda;
     padding: 30px;
     min-width: 450px;
-    margin: 3px 0;
     border-radius: 4px;
 }
 
@@ -241,7 +248,6 @@ article a:active{
     text-align: center;
     background: #f2f2f2;
     margin: 140px 0 0 3px;
-    padding-top: 20px;
 }
 .aside-container h3{
     text-align: left;
@@ -252,15 +258,18 @@ article a:active{
 }
 .aside-article>div{
     width: 80%;
-    margin: 20px auto;
+    margin: 0 auto;
     min-width: 150px;
+    padding-top: 20px;
 
 
 }
 .aside-article>div>img{
     width: 100%;
     height: auto;
+    padding-top: 20px;
 }
+
 @media screen and (max-width: 1024px){
     section, aside{
         width: 100%;
