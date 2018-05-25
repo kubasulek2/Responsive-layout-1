@@ -163,7 +163,23 @@ nav>form>button:hover{
         width: 100%;
     }
 }
+/*Slide Show*/
+.slide-show{
+    width: 100%;
 
+}
+/*.slide-show:after{
+    content: '';
+    display: block;
+    clear: both;
+}*/
+.slide{
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    display: none;
+    position: relative;
+}
 
 /*Main*/
 
@@ -177,7 +193,7 @@ div.row:after{
     display: block;
     clear: both;
 }
-section{
+section.main{
     float: left;
     width: 70%;
 }
@@ -195,7 +211,7 @@ aside{
 article{
     margin-bottom: 35px;
 }
-article img{
+article img, .slide-show img{
     width: 100%;
     min-width: 400px;
 }
