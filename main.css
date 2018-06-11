@@ -287,7 +287,7 @@ article a:active, .aside-button:active{
 }
 
 @media screen and (max-width: 1024px){
-    section, aside{
+    section.main, aside{
         width: 100%;
     }
     .aside-container{
@@ -323,4 +323,24 @@ footer>ul>li{
     display: block;
     margin-right: 15px;
     padding-top: 6px;
+}
+
+@media screen and (max-width: 600px){
+    footer>div::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    footer>ul{
+        float: none;
+        display: block;
+        clear: both;
+        text-align: center;
+    }
+    footer>ul>li{
+        float: none;
+        display: inline-block;
+        padding: 10px;
+        margin-top: -15px;
+    }
 }
