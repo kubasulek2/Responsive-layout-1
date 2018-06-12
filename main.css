@@ -47,7 +47,7 @@ nav:after{
 nav li{
     float: left;
     position: relative;
-    background: #e9e9e9
+    background: #e9e9e9;
 }
 li.active a{
     background: #008ae6;
@@ -166,19 +166,23 @@ nav>form>button:hover{
 /*Slide Show*/
 .slide-show{
     width: 100%;
+    text-align: center;
+    position: relative;
 
 }
-/*.slide-show:after{
-    content: '';
-    display: block;
-    clear: both;
-}*/
 .slide{
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 20px auto;
     display: none;
-    position: relative;
+}
+.circle{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #333333;
+    margin: 0 2px;
+    border-radius: 50%;
 }
 
 /*Main*/

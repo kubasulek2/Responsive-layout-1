@@ -1,29 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
+    //zmienne plus pokazanie pierwszego slajdu
+
     var slideIndex = 1;
     var slides = document.querySelectorAll(".slide");
-    var cirlces = document.querySelectorAll('.circle');
-
+    var circles = document.querySelectorAll('.circle');
     showSlides(slideIndex);
 
-    function showSlides(n) {
+    //funkcje
+
+    function changeSlide(n) {showSlides(slideIndex +=n)}
+
+    function chooseSlide(n){showSlides(slideIndex = n)}
+
+    function showSlides(n){
+
+        if (n > slides.length) {slideIndex = 1}
+        else if (n < 1){slideIndex = 5}
 
         for(var i = 0; i < slides.length ; i++){
             slides[i].style.display = "none";
             }
-        slides[n-1].style.display ='block';
-
+        console.log(slides[slideIndex-1]);
+        console.log(slideIndex);
+        slides[slideIndex-1].style.display ='block';
     }
 
-    function changeSlide(n) {
-        slideIndex+=n;
-        if(slideIndex>slides.length){
-            slideIndex = 1
-        }else if(slideIndex<1){
-            slideIndex = 5
-        }
-        showSlides(slideIndex);
 
-    }
+    //event listenery
     document.querySelector(".prev-button").addEventListener("click", function(e){
         e.preventDefault();
         changeSlide(-1)
@@ -34,9 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
         changeSlide(1)
     });
 
-    // function chooseSlide(n){
-    //
-    // }
+    for(var i = 0; i < circles.length; i++){
+        circles[i].onclick = function (a) {
+            return function () {
+                var slide = a+1;
+                chooseSlide(slide)
+            }
+        }(i);
+    }
+});
 
 
- });
