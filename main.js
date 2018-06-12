@@ -19,10 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for(var i = 0; i < slides.length ; i++){
             slides[i].style.display = "none";
-            }
-        console.log(slides[slideIndex-1]);
-        console.log(slideIndex);
+        }
+        for(var i = 0; i < circles.length ; i++){
+            circles[i].classList.remove("active");
+        }
         slides[slideIndex-1].style.display ='block';
+        circles[slideIndex-1].classList.add("active")
     }
 
 
