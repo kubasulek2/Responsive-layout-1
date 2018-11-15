@@ -61,6 +61,7 @@ nav a{
     text-decoration: none;
     font-size: 20px;
     color: #333333;
+    height: auto;
 }
 nav a:hover {
     background: #66c2ff;
@@ -75,8 +76,9 @@ nav span{
 .fa-caret-right, .fa-caret-down{
     display: inline-block;
     position: relative;
-    bottom: 8px;
+    top: 50%;
     left: 6px;
+
 
 }
 .hidden {
@@ -178,15 +180,15 @@ nav>form>button:hover{
     border-radius: 4px;
 }
 .slide{
-    width: 90%;
+    width: 96%;
     height: auto;
     margin: 0 auto;
     padding: 100px 0 10px;
     display: none;
-    position: relative;
-
 }
-
+.slide>div{
+    position: relative;
+}
 .circle{
     display: inline-block;
     width: 20px;
@@ -199,18 +201,25 @@ nav>form>button:hover{
     transition: 0.6s ease;
 
 }
+@media screen and (max-width: 600px){
+    .circle{
+        width: 15px;
+        height: 15px;
+    }
+}
+
 
 .number, .caption{
     color: white;
     position: absolute;
-    font-size: 16px;
+    font-size: 20px;
 }
 .number{
-    top: 22px;
+    top: 3px;
     left: 3px;
 }
 .caption{
-    bottom: 30px;
+    bottom: 6%;
     width: 100%;
 }
 
@@ -238,14 +247,14 @@ nav>form>button:hover{
 
 
 .prev-button:hover, .next-button:hover{
-    background: rgba(180,180,180, 0.5);
+    background: rgba(80,80,80, 0.6);
 }
 .prev-button{
-    left: 2%;
+    /*left: 2%;*/
 
 }
 .next-button{
-    right: 2%;
+    right: 0;
     border-radius: 0 4px 4px 0;
 }
 
