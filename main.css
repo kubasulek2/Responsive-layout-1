@@ -72,7 +72,7 @@ nav span{
 /* zrob potem w javaScript zeby przy szerokosci max 600px zamienic klase .fa-caret-right na .fa-caret-down i zmienic pozycje carety*/
 
 /*dodaj slide down w JQuery  */
-.fa-caret-right{
+.fa-caret-right, .fa-caret-down{
     display: inline-block;
     position: relative;
     bottom: 8px;
@@ -186,6 +186,7 @@ nav>form>button:hover{
     position: relative;
 
 }
+
 .circle{
     display: inline-block;
     width: 20px;

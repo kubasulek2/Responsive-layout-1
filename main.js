@@ -12,6 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showSlides(slideIndex);
 
+
+    // ustawienie carety w menu w zaleznosci od szerokosci ekranu
+
+    if(mobileViewport.matches){
+
+        document.getElementById("caret").classList.remove("fa-caret-right");
+        document.getElementById("caret").classList.add("fa-caret-down")
+    }
+
+    else{
+
+        document.getElementById("caret").classList.remove("fa-caret-down");
+        document.getElementById("caret").classList.add("fa-caret-right")
+    }
+
     //funkcje
 
     function changeSlide(n) {showSlides(slideIndex +=n)}
@@ -75,11 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileViewport.addListener(function (mq) {
 
         if(mq.matches){
-            alert("mobile")
+
+            document.getElementById("caret").className = "fa fa-caret-down"
         }
 
         else{
 
+            document.getElementById("caret").className = "fa fa-caret-right"
         }
     })
 
