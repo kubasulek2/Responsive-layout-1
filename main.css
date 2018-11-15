@@ -201,7 +201,6 @@ nav>form>button:hover{
 .number, .caption{
     color: white;
     position: absolute;
-    font-family:Arial;
     font-size: 16px;
 }
 .number{
