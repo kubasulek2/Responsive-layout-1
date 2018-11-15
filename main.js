@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButtons = document.querySelectorAll(".prev-button");
     const nextButtons = document.querySelectorAll(".next-button");
 
+    let mobileViewport = window.matchMedia("screen and (max-width: 600px)");
+
 
     showSlides(slideIndex);
 
@@ -67,6 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }(i);
     }
+
+    //menu dla mobile
+
+    mobileViewport.addListener(function (mq) {
+
+        if(mq.matches){
+            alert("mobile")
+        }
+
+        else{
+
+        }
+    })
+
+
+
 });
+
+
 
 
