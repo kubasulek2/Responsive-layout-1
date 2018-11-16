@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     //zmienne plus pokazanie pierwszego slajdu
 
-    let slideIndex = 1;
-    const slides = document.querySelectorAll(".slide");
     const circles = document.querySelectorAll('.circle');
     const prevButtons = document.querySelectorAll(".prev-button");
     const nextButtons = document.querySelectorAll(".next-button");
-
-    let mobileViewport = window.matchMedia("screen and (max-width: 600px)");
+    const expandMenuBtn1 = document.querySelector("nav>ul>li:last-child>a");
+    const menuToExpand1 = expandMenuBtn1.parentElement.querySelector("ul");
+    const expandMenuBtn2 = document.querySelector("ul.hidden>li:last-child>a");
+    const menuToExpand2 = expandMenuBtn2.parentElement.querySelector("ul");
+    const slides = document.querySelectorAll(".slide");
+    let slideIndex = 1;
+    let mobileViewport = window.matchMedia("screen and (max-width: 1024px)");
 
 
     showSlides(slideIndex);
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("caret").classList.add("fa-caret-right")
     }
 
-    //funkcje
+    //funkcje slajdy
 
     function changeSlide(n) {showSlides(slideIndex +=n)}
 
@@ -50,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         circles[slideIndex-1].classList.add("active");
     }
 
-    //event listenery
+    //event listenery slajdy
 
 
     for(let i = 0; i < prevButtons.length; i++){
@@ -98,10 +101,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.getElementById("caret").className = "fa fa-caret-right"
         }
+    });
+
+
+    //Expandable menu
+     
+    expandMenuBtn1.addEventListener("click", function () {
+
+        if(menuToExpand1.classList.length <= 1){
+
+            menuToExpand1.classList.add("visible");
+        }
+        else{
+
+            menuToExpand1.classList.remove("visible");
+            menuToExpand2.classList.length > 2 ? menuToExpand2.classList.remove("visible") : null;
+
+        }
+    });
+
+
+    expandMenuBtn2.addEventListener("click", function () {
+
+        menuToExpand2.classList.length  > 2 ? menuToExpand2.classList.remove("visible") : menuToExpand2.classList.add("visible");
     })
-
-
-
 });
 
 

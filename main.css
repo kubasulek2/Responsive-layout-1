@@ -95,7 +95,10 @@ nav span{
     top: -7px;
     border: 5px solid transparent;
 }
-nav li:last-child:hover>ul{
+/*nav li:last-child:hover>ul{*/
+    /*display: block;*/
+/*}*/
+ul.visible{
     display: block;
 }
 
