@@ -71,7 +71,6 @@ nav span{
     padding-left: 4px;
 }
 
-/*dodaj slide down w JQuery  */
 .fa-caret-right, .fa-caret-down{
     display: inline-block;
     position: relative;
@@ -92,7 +91,7 @@ nav span{
 }
 .side-nav{
     position: absolute;
-    left: 90px;
+    left: 98px;
     top: -7px;
     border: 5px solid transparent;
 }
@@ -133,29 +132,40 @@ nav>form>.fa{
 nav>form>button:hover{
     background: #cccccc;
 }
-@media screen and (max-width: 1000px) {
-    body > div > nav > ul > li{
+@media screen and (max-width: 1024px) {
+    nav > ul{
+        width: 100%;
+    }
+
+    nav li{
+        width: 33%;
+        text-align: center;
+    }
+    nav li a{
+
+    }
+    nav > ul > li{
         margin-bottom: 5px;
     }
 
     nav>form, nav>form>.fa{
         float: none;
         display: block;
-        width: 100%;
-        margin-top: 0;
+        width: 99%;
+        border-radius: 4px;
+        margin: 0 auto;
     }
     nav>form>input{
         display: block;
         float:none;
         clear: left;
         margin: 0 auto;
-        width: 45%;
+        width: 55%;
         -webkit-transition: width 2s ;
         transition: width 2s;
     }
     nav>form>input:focus{
-        width: 98%;
-        margin: 0 auto
+        width: 99%;
     }
 }
 
@@ -169,11 +179,11 @@ nav>form>button:hover{
 
     }
     nav>ul>li>ul.hidden{
-        position: absolute;
+        position: relative;
         width: 100%;
     }
     .side-nav{
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;
@@ -217,10 +227,13 @@ nav>form>button:hover{
     transition: 0.6s ease;
 
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
     .circle{
         width: 15px;
         height: 15px;
+    }
+    div.slide{
+        padding-top: 20px;
     }
 }
 
@@ -276,6 +289,26 @@ nav>form>button:hover{
 
 div.circles>span.active, div.circles>span:hover{
     background: #808080;
+}
+
+
+/*Fade Animation*/
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.8s;
+    animation-name: fade;
+    animation-duration: 1.8s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /*Main*/
