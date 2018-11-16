@@ -70,13 +70,11 @@ nav a:hover {
 nav span{
     padding-left: 4px;
 }
-/* zrob potem w javaScript zeby przy szerokosci max 600px zamienic klase .fa-caret-right na .fa-caret-down i zmienic pozycje carety*/
 
 /*dodaj slide down w JQuery  */
 .fa-caret-right, .fa-caret-down{
     display: inline-block;
     position: relative;
-    top: 50%;
     left: 6px;
 
 
@@ -105,13 +103,14 @@ nav li:last-child:hover>ul{
 
 nav>form, nav>form>button{
     float: right;
-
 }
+
+
 
 nav>form>input{
     padding: 6px;
     font-size: 18px;
-    margin-top: 4px;
+    margin: 4px 5px 0 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
 
@@ -134,23 +133,40 @@ nav>form>.fa{
 nav>form>button:hover{
     background: #cccccc;
 }
+@media screen and (max-width: 1000px) {
+    body > div > nav > ul > li{
+        margin-bottom: 5px;
+    }
+
+    nav>form, nav>form>.fa{
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 0;
+    }
+    nav>form>input{
+        display: block;
+        float:none;
+        clear: left;
+        margin: 0 auto;
+        width: 45%;
+        -webkit-transition: width 2s ;
+        transition: width 2s;
+    }
+    nav>form>input:focus{
+        width: 98%;
+        margin: 0 auto
+    }
+}
 
 
 @media screen and (max-width: 600px) {
-    nav>ul li, nav>form, nav>form>.fa{
+    nav>ul li{
         float: none;
         display: block;
         width: 100%;
         margin-top: 0;
 
-    }
-    nav>form>input{
-        width: 244px;
-        -webkit-transition: width 2s ;
-        transition: width 2s;
-    }
-    nav>form>input:focus{
-        width: 100%;
     }
     nav>ul>li>ul.hidden{
         position: absolute;
