@@ -78,16 +78,17 @@ nav span{
 
 
 }
-.hidden {
+.hidden{
     position: absolute;
+    display: none;
+    height: 0;
     overflow: hidden;
-    max-height: 0;
-
-
+    transition: height 350ms ease-in-out;
 }
-ul.visible{
-    overflow: visible;
-    max-height: 400px;
+ul.visible {
+    display: block;
+    height: auto;
+    /*overflow: visible;*/
 }
 
 .hidden li{
