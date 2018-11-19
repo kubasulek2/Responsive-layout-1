@@ -103,76 +103,60 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
-    //Expandable menu
-     
-    // expandMenuBtn1.addEventListener("click", function () {
-    //
-    //     if(menuToExpand1.classList.length <= 1){
-    //
-    //         menuToExpand1.classList.add("visible");
-    //     }
-    //     else{
-    //
-    //         menuToExpand1.classList.remove("visible");
-    //         menuToExpand2.classList.length > 2 ? menuToExpand2.classList.remove("visible") : null;
-    //
-    //     }
-    // });
-    //
-    //
-    // expandMenuBtn2.addEventListener("click", function () {
-    //
-    //     menuToExpand2.classList.length  > 2 ? menuToExpand2.classList.remove("visible") : menuToExpand2.classList.add("visible");
-    // });
-
-
     //expandable menu animation
-    let element = document.querySelector(".hidden");
 
     function getHeight(elem) {
-        elem.style.display = "block";
         let height = elem.scrollHeight + "px";
-        elem.style.display ="";
         return height;
     }
 
     function show(elem) {
+
         let height = getHeight(elem);
-        elem.classList.add("visible");
         elem.style.height =  height;
-
-
-        window.setTimeout(function () {
-            elem.style.height = "";
-        }, 350)
+        console.log(height)
     }
 
     function hide(elem){
-        elem.style.height = elem.scrollHeight + "px";
-        window.setTimeout(function () {
-           elem.style.height = '0'
-        },1);
 
-        window.setTimeout(function () {
-            elem.classList.remove("visible");
-        },350)
+        if (menuToExpand1.style.overflow === "visible") {
 
+            window.setTimeout(function () {
+                menuToExpand1.style.overflow = "hidden";
+            }, 250)
+        }
 
+        if (menuToExpand2.style.height !== "0") {
+
+            menuToExpand2.style.height = "0";
+            window.setTimeout(function () {
+                elem.style.height = "0"
+            },250)
+        }else{
+            elem.style.height = '0';
+        }
     }
+
     function toggle(elem){
-       elem.classList.contains("visible") ? hide(elem) : show(elem);
+        let height = parseInt(elem.style.height);
+        elem.parentElement.style.pointerEvents = "none";
+        window.setTimeout(function () {
+            elem.parentElement.style.pointerEvents = "auto"
+        },260);
+
+        if(height !== 0){
+            hide(elem)
+        }else{
+           show(elem)
+        }
     }
 
     expandMenuBtn1.addEventListener("click", function (event) {
-        let overflow = getComputedStyle(menuToExpand1).overflow;
-        overflow === "visible" ? menuToExpand1.style.overflow = "hidden" : null;
         toggle(menuToExpand1)
     });
     expandMenuBtn2.addEventListener("click", function (event) {
-        let overflow = getComputedStyle(menuToExpand1).overflow;
-        overflow === "hidden" ? menuToExpand1.style.overflow = "visible" : null;
-        toggle(menuToExpand2)
+        menuToExpand1.style.overflow = "visible";
+        toggle(menuToExpand2);
     })
 });
 

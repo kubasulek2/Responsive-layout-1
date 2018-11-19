@@ -5,7 +5,7 @@ Designed for 3 screen widths: up to 600px, up to 1024px and wider.
 
 Contain:
 -Fully responsive design
--Two-level dropdown menu 
+-Two-level dropdown menu, animated in javascript
 -Animated search bar
 -Animated buttons
 -Carousel slideshow
