@@ -80,15 +80,7 @@ nav span{
 }
 .hidden{
     position: absolute;
-    /*overflow: hidden;*/
-    /*display: none;*/
-    /*height: 0;*/
     transition: height 250ms ease-in-out;
-}
-ul.visible {
-    /*display: block;*/
-    /*height: auto;*/
-    /*overflow: visible;*/
 }
 
 .hidden li{
@@ -106,10 +98,6 @@ ul.visible {
     overflow: hidden;
 
 }
-/*nav li:last-child:hover>ul{*/
-/*display: block;*/
-/*}*/
-
 
 nav>form, nav>form>button{
     float: right;
